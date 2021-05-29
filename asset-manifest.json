@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/janakbharadwaj-urbanPiper/static/css/main.5643f5a9.chunk.css",
+    "main.js": "/janakbharadwaj-urbanPiper/static/js/main.3992d503.chunk.js",
+    "main.js.map": "/janakbharadwaj-urbanPiper/static/js/main.3992d503.chunk.js.map",
+    "runtime-main.js": "/janakbharadwaj-urbanPiper/static/js/runtime-main.4651e639.js",
+    "runtime-main.js.map": "/janakbharadwaj-urbanPiper/static/js/runtime-main.4651e639.js.map",
+    "static/js/2.042363d4.chunk.js": "/janakbharadwaj-urbanPiper/static/js/2.042363d4.chunk.js",
+    "static/js/2.042363d4.chunk.js.map": "/janakbharadwaj-urbanPiper/static/js/2.042363d4.chunk.js.map",
+    "index.html": "/janakbharadwaj-urbanPiper/index.html",
+    "precache-manifest.959471b3f21eede94c2f6931115f7f93.js": "/janakbharadwaj-urbanPiper/precache-manifest.959471b3f21eede94c2f6931115f7f93.js",
+    "service-worker.js": "/janakbharadwaj-urbanPiper/service-worker.js",
+    "static/css/main.5643f5a9.chunk.css.map": "/janakbharadwaj-urbanPiper/static/css/main.5643f5a9.chunk.css.map",
+    "static/js/2.042363d4.chunk.js.LICENSE.txt": "/janakbharadwaj-urbanPiper/static/js/2.042363d4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4651e639.js",
+    "static/js/2.042363d4.chunk.js",
+    "static/css/main.5643f5a9.chunk.css",
+    "static/js/main.3992d503.chunk.js"
+  ]
+}
