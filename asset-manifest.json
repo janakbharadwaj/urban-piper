@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/janakbharadwaj-urbanPiper/static/css/main.5643f5a9.chunk.css",
-    "main.js": "/janakbharadwaj-urbanPiper/static/js/main.3992d503.chunk.js",
-    "main.js.map": "/janakbharadwaj-urbanPiper/static/js/main.3992d503.chunk.js.map",
-    "runtime-main.js": "/janakbharadwaj-urbanPiper/static/js/runtime-main.4651e639.js",
-    "runtime-main.js.map": "/janakbharadwaj-urbanPiper/static/js/runtime-main.4651e639.js.map",
-    "static/js/2.042363d4.chunk.js": "/janakbharadwaj-urbanPiper/static/js/2.042363d4.chunk.js",
-    "static/js/2.042363d4.chunk.js.map": "/janakbharadwaj-urbanPiper/static/js/2.042363d4.chunk.js.map",
-    "index.html": "/janakbharadwaj-urbanPiper/index.html",
-    "precache-manifest.959471b3f21eede94c2f6931115f7f93.js": "/janakbharadwaj-urbanPiper/precache-manifest.959471b3f21eede94c2f6931115f7f93.js",
-    "service-worker.js": "/janakbharadwaj-urbanPiper/service-worker.js",
-    "static/css/main.5643f5a9.chunk.css.map": "/janakbharadwaj-urbanPiper/static/css/main.5643f5a9.chunk.css.map",
-    "static/js/2.042363d4.chunk.js.LICENSE.txt": "/janakbharadwaj-urbanPiper/static/js/2.042363d4.chunk.js.LICENSE.txt"
+    "main.css": "/urban-piper/static/css/main.5643f5a9.chunk.css",
+    "main.js": "/urban-piper/static/js/main.1c4bee45.chunk.js",
+    "main.js.map": "/urban-piper/static/js/main.1c4bee45.chunk.js.map",
+    "runtime-main.js": "/urban-piper/static/js/runtime-main.5ca7eee9.js",
+    "runtime-main.js.map": "/urban-piper/static/js/runtime-main.5ca7eee9.js.map",
+    "static/js/2.9338ad32.chunk.js": "/urban-piper/static/js/2.9338ad32.chunk.js",
+    "static/js/2.9338ad32.chunk.js.map": "/urban-piper/static/js/2.9338ad32.chunk.js.map",
+    "index.html": "/urban-piper/index.html",
+    "precache-manifest.7f66bd6ff1b2b9d5e2c605849d316ec6.js": "/urban-piper/precache-manifest.7f66bd6ff1b2b9d5e2c605849d316ec6.js",
+    "service-worker.js": "/urban-piper/service-worker.js",
+    "static/css/main.5643f5a9.chunk.css.map": "/urban-piper/static/css/main.5643f5a9.chunk.css.map",
+    "static/js/2.9338ad32.chunk.js.LICENSE.txt": "/urban-piper/static/js/2.9338ad32.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4651e639.js",
-    "static/js/2.042363d4.chunk.js",
+    "static/js/runtime-main.5ca7eee9.js",
+    "static/js/2.9338ad32.chunk.js",
     "static/css/main.5643f5a9.chunk.css",
-    "static/js/main.3992d503.chunk.js"
+    "static/js/main.1c4bee45.chunk.js"
   ]
 }
