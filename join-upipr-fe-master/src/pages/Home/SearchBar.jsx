@@ -5,6 +5,8 @@ import { useThrottle } from "./throttle";
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 
+
+//styled components
 const SearchBarWrapper = styled.div`
   width: 400px;
   padding: 12px 20px;
@@ -68,22 +70,26 @@ export default function SearchBar({
   setLoading
 }) {
   const [q, setQ] = useState("");
-  const [active, setActive] = useState(0);
   const throttledVal = useThrottle(q, 1000);
+
+
   const handleInputChange = (e) => {
     setQ(e.target.value);
     setLoading(true);
   };
 
+
   useEffect(() => {
     onChange(throttledVal);
   }, [throttledVal, onChange]);
+
 
   const clearQuery = () => {
     setQ("");
     if (loading) setLoading(false);
   };
 
+  
   return (
     <>
       <SearchBarWrapper>

@@ -11,7 +11,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const [data,setData] = useState([])
-  //const [directUrl, setDirectUrl] = useState('')
+
 
   useEffect(() => {
     if (query === "") {
@@ -23,6 +23,8 @@ export default function HomePage() {
     setLoading(false);
   }, [query]);
 
+
+  //get the data from api
   const getData = (query) => {
     axios.get(`https://swapi.dev/api/people/?search=${query}`)
     .then((res) => {
@@ -31,9 +33,13 @@ export default function HomePage() {
     });
   };
   
+
+  //set the url to local storage
   const handleUrl=(url)=>{
-    console.log(url)
+    localStorage.getItem("starwars_url")
+    localStorage.setItem("starwars_url",JSON.stringify(url))
   }
+
 
   return (
     <div className="App">

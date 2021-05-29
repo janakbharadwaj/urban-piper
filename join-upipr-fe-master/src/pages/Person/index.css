@@ -1,3 +1,39 @@
-.person h1 {
-    color: #ecd014;
+.indivPerson_div{
+    /* border: 1px solid white; */
+    display: grid;
+    grid-template-columns: 31% 38% 31%;
+    font-family: 'Courier New', Courier, monospace;
 }
+
+/* .indivPerson_imgDiv{
+    border: 1px solid white;
+} */
+
+.indivPerson_imgDiv img{
+    width: 100%;
+}
+
+.indivPerson_personDiv{
+    /* border: 1px solid white; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.indivPerson_personDiv>h1{
+    color: #ecd014;
+    margin: 0px;
+}
+
+.indivPerson_personDiv > h1,h2{
+    margin: 10px;
+}
+
+.indivPerson_personDiv>p{
+    line-height: 5px;
+    font-size: 20px;
+}
+
+
