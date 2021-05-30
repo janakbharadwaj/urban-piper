@@ -1,9 +1,9 @@
 # Urban Piper Assignment 
 
-This work is done based on the Urban Piper company assignment.
+An Application in which user can search their favorite Starwars character.
 
 ## Live Demo
-Live demo of this application [Live](https://janakbharadwaj-starwars.netlify.app/)
+Live demo of this application [Demo](https://janakbharadwaj-starwars.netlify.app/)
 
 ## Installation
 
@@ -25,20 +25,25 @@ npm start
 * Javascript
 * React JS
 * CSS
-* Styled Components
+* HTML
 
-## Usage
-#### User can see the search bar on the landing page of the app, where user can search for any star wars characters, this is mobile responsive as well.
+## Glimpse 
 
-![starWars1](https://user-images.githubusercontent.com/73184042/120080767-07b98600-c0d8-11eb-8676-39aeb22c9336.JPG)
+#### User can see the search bar on the landing page of the app, where user can search for any star wars characters.
 
-#### Once the user tries to search for any character the available possibilities will be shown as below, user can peek into brief information about the selected character with a click on it.
+![starwars7](https://user-images.githubusercontent.com/73184042/120112262-bde1a600-c192-11eb-8d90-69f6df8acced.JPG)
 
-![starWars2](https://user-images.githubusercontent.com/73184042/120080774-0ab47680-c0d8-11eb-97ea-3d4622aa1301.JPG)
+#### Once the user tries to search for any character the available possibilities will be shown as below, user can peek into brief information about the selected character with a click or by pressing the enter key.
+
+![starWars8](https://user-images.githubusercontent.com/73184042/120112263-c0440000-c192-11eb-8332-38f66dd28dff.JPG)
 
 #### When clicked on a particular character, the user will be redirected to another page where the character information is displayed.
 
-![starWars4](https://user-images.githubusercontent.com/73184042/120090498-99e57c80-c120-11eb-8bf9-23a20958230e.JPG)
+![starWars5](https://user-images.githubusercontent.com/73184042/120112269-c2a65a00-c192-11eb-8c4d-9c9318413fad.JPG)
+
+#### Application is Mobile Responsive as well.
+![starWars6](https://user-images.githubusercontent.com/73184042/120112270-c508b400-c192-11eb-86bf-8f3a1f8e23c0.JPG)
+
 
 ## Resources
 * Star Wars API [Swapi](https://swapi.dev/)
