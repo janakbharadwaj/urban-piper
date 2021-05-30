@@ -41,5 +41,5 @@ npm start
 ![starWars4](https://user-images.githubusercontent.com/73184042/120090498-99e57c80-c120-11eb-8bf9-23a20958230e.JPG)
 
 ## Resources
-Star Wars API [Swapi](https://swapi.dev/)
-MDN Web Docs [MDN](https://developer.mozilla.org/en-US/)
+* Star Wars API [Swapi](https://swapi.dev/)
+* MDN Web Docs [MDN](https://developer.mozilla.org/en-US/)
