@@ -2,17 +2,13 @@ import axios from "axios";
 import React from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import "./index.css";
-import logo from "./star-wars-logo.png";
 
 function Person() {
   const [person_data, setPersonData] = React.useState([]);
   const history = useHistory();
   const location = useLocation();
 
-  /*
-  parsing the url to get the person id such that we can get 
-  data of the person by sending the get request
-  */
+  //fetching data with url
   React.useEffect(() => {
     let id = +location.pathname.split("/")[2];
     axios
@@ -25,12 +21,10 @@ function Person() {
     history.push("/");
   };
 
+  //{person_data?.name}
   return (
     <div className='person-parent'>
-      <div className="person-image">
-      </div>
       <div className="person-card">
-        {/* <img src={logo} alt="Star Wars Logo" className="person-card--logo" /> */}
         <div className="person-card--contentBox">
           <p className="person-card--contentBox--p">Name : {person_data?.name}</p>
         </div>
@@ -59,9 +53,11 @@ function Person() {
             Eye Color : {person_data?.eye_color}
           </p>
         </div>
-        <div className="person-card--redirectBtn" onClick={handleRedirect}>
-          <p className="person-card--redirectBtn--p">Back</p>
-        </div>
+      </div>
+      <div className="person-card--contentBox redirectBtn" onClick={handleRedirect}>
+          <button onClick={handleRedirect}>
+            Back
+          </button>
       </div>
     </div>
   );

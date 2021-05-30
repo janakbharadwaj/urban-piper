@@ -28,7 +28,7 @@ npm start
 * Styled Components
 
 ## Usage
-#### User can see the search bar on the landing page of the app, where user can search for any star wars characters. 
+#### User can see the search bar on the landing page of the app, where user can search for any star wars characters, this is mobile responsive as well.
 
 ![starWars1](https://user-images.githubusercontent.com/73184042/120080767-07b98600-c0d8-11eb-8676-39aeb22c9336.JPG)
 
@@ -40,5 +40,6 @@ npm start
 
 ![starWars4](https://user-images.githubusercontent.com/73184042/120090498-99e57c80-c120-11eb-8bf9-23a20958230e.JPG)
 
-## Credits
+## Resources
 Star Wars API [Swapi](https://swapi.dev/)
+MDN Web Docs [MDN](https://developer.mozilla.org/en-US/)

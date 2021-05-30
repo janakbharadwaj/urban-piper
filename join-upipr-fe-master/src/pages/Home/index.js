@@ -13,18 +13,15 @@ function HomePage() {
   const [error, Seterror] = React.useState(false);
   const [activeBox, SetActiveBox] = React.useState(-1);
   const [person_id, setId] = React.useState(-1);
-  
-  //using refs for the input and scroll bar to add the features like suggestion names and scroll using keys
   const inputref = React.useRef();
   const scrollref = React.useRef();
-  
-  //used to route
   const history = useHistory();
 
-  // added debouncing in the query to optimize the network request
+  // debouncing in the query
   const handleQuery = debounce((e) => {
     return Setquery(e);
   });
+
 
   const getData = (searchQuery) => {
     Setloader(true);
@@ -40,13 +37,14 @@ function HomePage() {
       .catch((err) => Seterror(true));
   };
 
-  //reseting the search bar to initial state
+
   const handleCancel = () => {
     inputref.current.value = "";
     Setquery("");
     Setdata(null);
     SetActiveBox(-1);
   };
+
 
   const handleSearch = () => {
     if (person_id !== -1) {
@@ -56,6 +54,7 @@ function HomePage() {
     }
   };
 
+  
   React.useEffect(() => {
     if (error === true) {
       alert("something went wrong reoad the page");
@@ -65,12 +64,8 @@ function HomePage() {
     }
   }, [query,error]);
 
-  /*
-  * handleKeup function will be used for the events triggered by keys
-  * e.keyCode will give the value of key pressed -> 38(ArrowUp), 40(ArrowDown), 13(Enter)
-  * ActiveBox will give the number active box
-  * scrollTop will give us the view point so that if we add 22 it will increase the view point 
-  */
+  
+  //function used to trigger events by keys
   const handlekeyUp = (e) => {
     switch (e.keyCode) {
       case 38:
@@ -95,10 +90,7 @@ function HomePage() {
     }
   };
 
-  /*
-  Using inputref to change the value according to activeBox such that it will 
-  change input box value on keydown or keyup
-  */  
+  //chaanging active element
   React.useEffect(() => {
     if (activeBox > -1 && data?.length > activeBox) {
       let currentName = data[activeBox].name;
@@ -107,6 +99,7 @@ function HomePage() {
       setId(idNumber ? idNumber[5] * 1 : 1);
     }
   }, [activeBox, data, person_id]);
+
 
   return (
     <div onKeyUp={handlekeyUp}>
@@ -121,7 +114,7 @@ function HomePage() {
           placeholder="search by name"
         />
         {query !== "" ? (
-          <React.Fragment>
+          <>
             <div className="search-box--cancelBtn" onClick={handleCancel}>
               X
             </div>
@@ -138,21 +131,24 @@ function HomePage() {
             ) : (
               <div className="search-box--loader"></div>
             )}
-          </React.Fragment>
-        ) : null}
+          </>
+        ) : (<div className="search-box--searchBtn1">
+                <p
+                  onClick={handleSearch}
+                  className="search-box--searchBtn--logo1"
+                >
+                  <BiSearch />
+                </p>
+              </div>
+      )}
       </div>
-      {data !== null ? (
+      {data && (
         <div className="suggestion-box" ref={scrollref}>
           <div className="suggestion-box--splitLine"></div>
-          {/* active number is the box number which is active(global value).Number is the index of that
-          box. Using this when active number is equal to index then css with highlighted background will
-          be activated */}
           {data?.map((item, i) => (
             <SuggestionCard key={i} {...item} active={activeBox} number={i} />
           ))}
         </div>
-      ) : (
-        <p className="error-text">Search character name</p>
       )}
     </div>
   );

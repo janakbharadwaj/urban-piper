@@ -11,7 +11,7 @@ function NotFound() {
     <div className="not-found">
       <h2>This is not the page you are looking for</h2>
       <div className="person-card--redirectBtn" onClick={handleRedirect}>
-        <p className="person-card--redirectBtn--p">Go back to search..</p>
+        <p className="person-card--redirectBtn--p">Back</p>
       </div>
     </div>
   );
