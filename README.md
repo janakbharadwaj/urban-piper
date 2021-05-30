@@ -3,7 +3,7 @@
 This work is done based on the Urban Piper company assignment.
 
 ## Live Demo
-Live demo of this application [Live]()
+Live demo of this application [Live](https://janakbharadwaj-starwars.netlify.app/)
 
 ## Installation
 
