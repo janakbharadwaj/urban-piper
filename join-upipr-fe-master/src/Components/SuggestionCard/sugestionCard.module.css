@@ -1,0 +1,30 @@
+.suggestionCard{
+    height: fit-content;
+    width: 100%;
+    color: #f2f2f2;
+    display: flex;
+   position: relative;
+}
+.suggestionCard:hover{
+    background-color:rgb(185, 185, 185) ;
+    cursor: pointer;
+}
+.suggestionCard_Active{
+    background-color:rgb(185, 185, 185) ;
+}
+.suggestionCard_name{
+    padding-left: 20px;
+}
+.suggestionCard_birth_year{
+    font-size: 15px;
+    color: gray;
+    font-weight: 500;
+
+}
+.suggestionCard_gender{
+    position: absolute;
+    right: 20px;
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+}

@@ -1,3 +1,17 @@
 .not-found {
-    color: #ecd014;
+  color: #ecd014;
+}
+.person-card--redirectBtn {
+  height: 40px;
+  width: 80%;
+  border-radius: 8px;
+  background-color: #ff8800;
+  text-align: center;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.person-card--redirectBtn--p {
+  padding: 8px;
+  font-weight: 800;
+  color: black;
 }

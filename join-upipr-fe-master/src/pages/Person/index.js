@@ -1,72 +1,67 @@
-import React from 'react';
-import './index.css';
-import axios from "axios"
-
-let backgrounImages=[
-  "https://lumiere-a.akamaihd.net/v1/images/star-wars-the-rise-of-skywalker-theatrical-poster-1000_ebc74357.jpeg?region=0%2C0%2C891%2C1372",
-  "https://pbs.twimg.com/media/ECwE_nmU0AAQBMs.jpg",
-  "https://media.contentapi.ea.com/content/dam/gin/images/2017/01/star-wars-battlefront-key-art.jpg.adapt.crop3x5.533p.jpg",
-  "https://i.redd.it/pmdvsolq9d341.jpg",
-  "https://www.wallpapertip.com/wmimgs/249-2493510_star-wars-phone-wallpaper.jpg",
-  "https://i.imgur.com/WI1vHvm.jpg",
-]
+import axios from "axios";
+import React from "react";
+import { useHistory, useLocation } from "react-router-dom";
+import "./index.css";
+import logo from "./star-wars-logo.png";
 
 function Person() {
-  const [name,setName] = React.useState('')
-  const [birthYear,setBirthYear] = React.useState('')
-  const [height,setHeight] = React.useState('')
-  const [mass,setMass] = React.useState('')
-  const [hairColor,setHairColor] = React.useState('')
-  const [skinColor,setSkinColor] = React.useState('')
-  const [eyeColor,setEyeColor] = React.useState('')
-  const [gender,setGender] = React.useState('')
+  const [person_data, setPersonData] = React.useState([]);
+  const history = useHistory();
+  const location = useLocation();
 
-  const randomImage = backgrounImages[Math.floor(Math.random() * backgrounImages.length)];
-  
-  React.useEffect(()=>{
-    let url = localStorage.getItem("starwars_url")
-    let parsedUrl = JSON.parse(url)
-    getData(parsedUrl)
-  },[])
+  /*
+  parsing the url to get the person id such that we can get 
+  data of the person by sending the get request
+  */
+  React.useEffect(() => {
+    let id = +location.pathname.split("/")[2];
+    axios
+      .get(`http://swapi.dev/api/people/${id}/`)
+      .then((res) => setPersonData(res.data))
+      .catch((err) => err);
+  }, [location.pathname]);
 
-  const getData=(directUrl)=>{
-    axios.get(directUrl)
-    .then((res)=>{
-      setName(res.data.name)
-      setBirthYear(res.data.birth_year)
-      setHeight(res.data.height)
-      setMass(res.data.mass)
-      setHairColor(res.data.hair_color)
-      setSkinColor(res.data.skin_color)
-      setEyeColor(res.data.eye_color)
-      setGender(res.data.gender)
-    })
-  }
+  const handleRedirect = () => {
+    history.push("/");
+  };
 
-  
   return (
-    <div className='indivPerson_div'>
-      <div className='indivPerson_imgDiv'>
-        <img 
-          src={randomImage}
-          alt='starWarsImg'
-        />
+    <div className='person-parent'>
+      <div className="person-image">
       </div>
-      <div className='indivPerson_personDiv'>
-        {name && <h1>{name}</h1>}
-        {birthYear && <h2>Birth : {birthYear}</h2>}
-        {gender && <h2>Gender : {gender}</h2>}
-        {height && <p>Height : {height}</p>}
-        {mass && <p>Mass : {mass}</p>}
-        {hairColor && <p>Hair : {hairColor}</p>}
-        {eyeColor && <p>Eyes : {eyeColor}</p>}
-        {skinColor && <p>Skin : {skinColor}</p>}
-      </div>
-      <div className='indivPerson_imgDiv'>
-        <img 
-          src={randomImage}
-          alt='starWarsImg'
-        />
+      <div className="person-card">
+        {/* <img src={logo} alt="Star Wars Logo" className="person-card--logo" /> */}
+        <div className="person-card--contentBox">
+          <p className="person-card--contentBox--p">Name : {person_data?.name}</p>
+        </div>
+        <div className="person-card--contentBox">
+          <p className="person-card--contentBox--p">
+            Birth Year : {person_data?.birth_year}
+          </p>
+        </div>
+        <div className="person-card--contentBox">
+          <p className="person-card--contentBox--p">
+            Gender : {person_data?.gender}
+          </p>
+        </div>
+        <div className="person-card--contentBox">
+          <p className="person-card--contentBox--p">
+            Height : {person_data?.height}
+          </p>
+        </div>
+        <div className="person-card--contentBox">
+          <p className="person-card--contentBox--p">
+            Hair Color : {person_data?.hair_color}
+          </p>
+        </div>
+        <div className="person-card--contentBox">
+          <p className="person-card--contentBox--p">
+            Eye Color : {person_data?.eye_color}
+          </p>
+        </div>
+        <div className="person-card--redirectBtn" onClick={handleRedirect}>
+          <p className="person-card--redirectBtn--p">Back</p>
+        </div>
       </div>
     </div>
   );

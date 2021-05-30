@@ -1,39 +1,49 @@
-.indivPerson_div{
-    /* border: 1px solid white; */
-    display: grid;
-    grid-template-columns: 31% 38% 31%;
-    font-family: 'Courier New', Courier, monospace;
+.person-parent{
+  /* border: 1px solid white; */
+  display: flex;
 }
 
-/* .indivPerson_imgDiv{
-    border: 1px solid white;
-} */
-
-.indivPerson_imgDiv img{
-    width: 100%;
+.person-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
 }
 
-.indivPerson_personDiv{
-    /* border: 1px solid white; */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.person-image img{
+  width: 100%;
 }
 
-.indivPerson_personDiv>h1{
-    color: #ecd014;
-    margin: 0px;
+.person-card {
+  width: 325px;
+  margin: 50px auto;
+  background-color: #2d2f30;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.person-card--logo {
+  width: 150px;
+  margin-left: 90px;
 }
 
-.indivPerson_personDiv > h1,h2{
-    margin: 10px;
+.person-card--contentBox--p {
+  padding: 8px;
+  font-weight: 500;
+  text-align: center;
+  color: #f8db15;
+  font-weight: 600;
+  font-size: 20px;
 }
-
-.indivPerson_personDiv>p{
-    line-height: 5px;
-    font-size: 20px;
+.person-card--redirectBtn {
+  height: 40px;
+  width: 80%;
+  border-radius: 8px;
+  background-color: #f8db15;
+  text-align: center;
+  margin-left: 30px;
 }
-
-
+.person-card--redirectBtn--p {
+  padding: 8px;
+  font-weight: 800;
+}
