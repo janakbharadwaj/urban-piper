@@ -38,7 +38,7 @@ npm start
 
 #### When clicked on a particular character, the user will be redirected to another page where the character information is displayed.
 
-![starWars3](https://user-images.githubusercontent.com/73184042/120080778-0d16d080-c0d8-11eb-812e-6c44f91c050f.JPG)
+![starWars4](https://user-images.githubusercontent.com/73184042/120090498-99e57c80-c120-11eb-8bf9-23a20958230e.JPG)
 
 ## Credits
 Star Wars API [Swapi](https://swapi.dev/)
